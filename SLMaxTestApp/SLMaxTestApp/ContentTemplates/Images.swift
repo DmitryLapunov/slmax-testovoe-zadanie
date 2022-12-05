@@ -19,5 +19,7 @@ enum Images {
         static let darkTheme = UIImage(named: "dark_theme")
         static let lightTheme = UIImage(named: "light_theme")
         static let cancel = UIImage(named: "cancel")
+        static let chevronDown = UIImage(systemName: "chevron.down")
+        static let chevronUp = UIImage(systemName: "chevron.up")
     }
 }

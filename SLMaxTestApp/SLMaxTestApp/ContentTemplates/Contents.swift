@@ -10,6 +10,8 @@ import Foundation
 enum Contents {
     enum Main {
         static let appTitle = "Заметки"
+        static let chevronRight = "\u{203A}"
+        static let keyboardDoneButton = "Готово"
     }
     
     enum Note {

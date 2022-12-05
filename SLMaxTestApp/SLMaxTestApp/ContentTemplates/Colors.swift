@@ -29,13 +29,13 @@ enum Colors {
             }
         }()
         static let cellBorder = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2).cgColor
-        static let noteAddBorder: CGColor = {
+        static let noteAddBorder: UIColor = {
             return UIColor { (uiTraitCollection: UITraitCollection) -> UIColor in
                 let lightTheme = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
                 let darkTheme = UIColor(red: 0.49, green: 0.49, blue: 0.49, alpha: 0.61)
                 return uiTraitCollection.userInterfaceStyle == .light ? lightTheme : darkTheme
             }
-        }().cgColor
+        }()
         static let background = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
         static let noteDeletionBackground = UIColor(red: 0.892, green: 0, blue: 0, alpha: 1)
         static let noteDeletionTint = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
@@ -56,13 +56,13 @@ enum Colors {
                 return uiTraitCollection.userInterfaceStyle == .light ? lightTheme : darkTheme
             }
         }()
-        static let commentBorder: CGColor = {
+        static let commentBorder: UIColor = {
             return UIColor { (uiTraitCollection: UITraitCollection) -> UIColor in
                 let lightTheme = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1)
                 let darkTheme = UIColor(red: 0.121, green: 0.121, blue: 0.121, alpha: 1)
                 return uiTraitCollection.userInterfaceStyle == .light ? lightTheme : darkTheme
             }
-        }().cgColor
+        }()
         static let commentParameter = UIColor(red: 0.562, green: 0.562, blue: 0.562, alpha: 1)
     }
     

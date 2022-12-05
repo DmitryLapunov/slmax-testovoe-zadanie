@@ -8,22 +8,28 @@
 import UIKit
 
 class NotesViewController: UIViewController {
+    
+    let controllerView = NotesView()
+    
+    override func loadView() {
+        super.loadView()
+        self.view = controllerView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    init() {
+        super.init(nibName: nil, bundle: nil)
     }
-    */
-
+    
+    required convenience init?(coder: NSCoder) {
+        self.init()
+    }
+    
+    private func setupView() {
+//        controllerView.tableView.dataSource = self
+//        controllerView.tableView.delegate = self
+    }
 }
