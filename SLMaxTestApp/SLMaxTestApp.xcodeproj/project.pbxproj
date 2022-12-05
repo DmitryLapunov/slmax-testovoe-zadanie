@@ -12,6 +12,14 @@
 		89651F67293D4E04006F3CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89651F66293D4E04006F3CB7 /* Assets.xcassets */; };
 		89651F6A293D4E04006F3CB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89651F68293D4E04006F3CB7 /* LaunchScreen.storyboard */; };
 		89651F73293D4F07006F3CB7 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F72293D4F07006F3CB7 /* NotesViewController.swift */; };
+		89651F78293D5719006F3CB7 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89651F76293D5719006F3CB7 /* Raleway-SemiBold.ttf */; };
+		89651F79293D5719006F3CB7 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89651F77293D5719006F3CB7 /* Raleway-Light.ttf */; };
+		89651F7B293D577D006F3CB7 /* RalewayFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F7A293D577D006F3CB7 /* RalewayFont.swift */; };
+		89651F7D293D57B8006F3CB7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F7C293D57B8006F3CB7 /* Fonts.swift */; };
+		89651F7F293D652D006F3CB7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F7E293D652D006F3CB7 /* Colors.swift */; };
+		89651F81293D7567006F3CB7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F80293D7567006F3CB7 /* Images.swift */; };
+		89651F83293D78DE006F3CB7 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F82293D78DE006F3CB7 /* Contents.swift */; };
+		89651F85293D7ADC006F3CB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F84293D7ADC006F3CB7 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		89651F69293D4E04006F3CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89651F6B293D4E04006F3CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89651F72293D4F07006F3CB7 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		89651F76293D5719006F3CB7 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBold.ttf"; path = "../../../../../../Desktop/Backup/SLMaxResources/Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		89651F77293D5719006F3CB7 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "../../../../../../Desktop/Backup/SLMaxResources/Raleway-Light.ttf"; sourceTree = "<group>"; };
+		89651F7A293D577D006F3CB7 /* RalewayFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RalewayFont.swift; sourceTree = "<group>"; };
+		89651F7C293D57B8006F3CB7 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		89651F7E293D652D006F3CB7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		89651F80293D7567006F3CB7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		89651F82293D78DE006F3CB7 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
+		89651F84293D7ADC006F3CB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 		89651F59293D4E03006F3CB7 /* SLMaxTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				89651F74293D5008006F3CB7 /* ContentTemplates */,
 				89651F71293D4EE8006F3CB7 /* NotesScreen */,
 				89651F5A293D4E03006F3CB7 /* AppDelegate.swift */,
 				89651F66293D4E04006F3CB7 /* Assets.xcassets */,
@@ -70,6 +87,29 @@
 				89651F72293D4F07006F3CB7 /* NotesViewController.swift */,
 			);
 			path = NotesScreen;
+			sourceTree = "<group>";
+		};
+		89651F74293D5008006F3CB7 /* ContentTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				89651F75293D56E9006F3CB7 /* RalewayFont */,
+				89651F7C293D57B8006F3CB7 /* Fonts.swift */,
+				89651F7E293D652D006F3CB7 /* Colors.swift */,
+				89651F80293D7567006F3CB7 /* Images.swift */,
+				89651F82293D78DE006F3CB7 /* Contents.swift */,
+				89651F84293D7ADC006F3CB7 /* Constants.swift */,
+			);
+			path = ContentTemplates;
+			sourceTree = "<group>";
+		};
+		89651F75293D56E9006F3CB7 /* RalewayFont */ = {
+			isa = PBXGroup;
+			children = (
+				89651F77293D5719006F3CB7 /* Raleway-Light.ttf */,
+				89651F76293D5719006F3CB7 /* Raleway-SemiBold.ttf */,
+				89651F7A293D577D006F3CB7 /* RalewayFont.swift */,
+			);
+			path = RalewayFont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,8 +170,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89651F78293D5719006F3CB7 /* Raleway-SemiBold.ttf in Resources */,
 				89651F6A293D4E04006F3CB7 /* LaunchScreen.storyboard in Resources */,
 				89651F67293D4E04006F3CB7 /* Assets.xcassets in Resources */,
+				89651F79293D5719006F3CB7 /* Raleway-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89651F81293D7567006F3CB7 /* Images.swift in Sources */,
+				89651F7B293D577D006F3CB7 /* RalewayFont.swift in Sources */,
+				89651F7F293D652D006F3CB7 /* Colors.swift in Sources */,
+				89651F7D293D57B8006F3CB7 /* Fonts.swift in Sources */,
 				89651F73293D4F07006F3CB7 /* NotesViewController.swift in Sources */,
 				89651F5B293D4E03006F3CB7 /* AppDelegate.swift in Sources */,
 				89651F65293D4E03006F3CB7 /* SLMaxTestApp.xcdatamodeld in Sources */,
+				89651F83293D78DE006F3CB7 /* Contents.swift in Sources */,
+				89651F85293D7ADC006F3CB7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
