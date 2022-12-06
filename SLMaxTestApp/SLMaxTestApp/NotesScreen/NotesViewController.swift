@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum HandleObserver {
+    case add
+    case remove
+}
+
 final class NotesViewController: UIViewController {
     
     let controllerView = NotesView()
@@ -22,6 +27,16 @@ final class NotesViewController: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        handleObserver(observerAction: .add)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        handleObserver(observerAction: .remove)
+    }
+    
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -35,5 +50,6 @@ final class NotesViewController: UIViewController {
         controllerView.tableView.delegate = self
         controllerView.notesViewDelegate = self
         controllerView.textFieldsView.titleField.delegate = self
+        handleObserver(observerAction: .add)
     }
 }

@@ -29,6 +29,7 @@
 		89651F95293EBEC3006F3CB7 /* NotesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F94293EBEC3006F3CB7 /* NotesViewDelegate.swift */; };
 		89651F97293ED042006F3CB7 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F96293ED042006F3CB7 /* DescriptionCell.swift */; };
 		89651F99293ED763006F3CB7 /* NotesViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F98293ED763006F3CB7 /* NotesViewController+TextField.swift */; };
+		89651F9B293F35ED006F3CB7 /* NotesViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89651F9A293F35ED006F3CB7 /* NotesViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		89651F94293EBEC3006F3CB7 /* NotesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewDelegate.swift; sourceTree = "<group>"; };
 		89651F96293ED042006F3CB7 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		89651F98293ED763006F3CB7 /* NotesViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesViewController+TextField.swift"; sourceTree = "<group>"; };
+		89651F9A293F35ED006F3CB7 /* NotesViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				89651F86293E4389006F3CB7 /* NotesView.swift */,
 				89651F88293E4BBC006F3CB7 /* TextFieldsView.swift */,
 				89651F8A293E82D5006F3CB7 /* Cells */,
+				89651F9A293F35ED006F3CB7 /* NotesViewController+Extension.swift */,
 			);
 			path = NotesScreen;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				89651F99293ED763006F3CB7 /* NotesViewController+TextField.swift in Sources */,
 				89651F90293E9F49006F3CB7 /* NoteStructure.swift in Sources */,
 				89651F83293D78DE006F3CB7 /* Contents.swift in Sources */,
+				89651F9B293F35ED006F3CB7 /* NotesViewController+Extension.swift in Sources */,
 				89651F85293D7ADC006F3CB7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
