@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TextFieldsView: UIView {
+final class TextFieldsView: UIView {
+    
+    var noteCreationAction: ((NoteStructure) -> Void)?
     
     private lazy var textFieldToolbar: UIToolbar = {
         let toolbar = UIToolbar()
@@ -20,7 +22,7 @@ class TextFieldsView: UIView {
         return toolbar
     }()
     
-    private lazy var titleField: UITextField = {
+    lazy var titleField: UITextField = {
         let textField = UITextField()
         textField.inputAccessoryView = textFieldToolbar
         textField.textColor = Colors.Note.mainColor
@@ -133,7 +135,19 @@ class TextFieldsView: UIView {
     }
     
     @objc private func postButtonAction() {
-        
+        if let title = titleField.text,
+           !title.isEmpty,
+           let description = descriptionField.text,
+           !description.isEmpty {
+            let date = CustomDateFormatter.getCurrentDate()
+            let noteStructure = NoteStructure(title: title,
+                                              description: description,
+                                              date: date)
+            titleField.text?.removeAll()
+            descriptionField.text?.removeAll()
+            doneTyping()
+            noteCreationAction?(noteStructure)
+        }
     }
     
     @objc private func doneTyping() {

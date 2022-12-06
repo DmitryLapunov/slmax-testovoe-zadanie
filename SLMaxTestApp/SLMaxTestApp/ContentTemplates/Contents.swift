@@ -17,6 +17,7 @@ enum Contents {
     enum Note {
         static let noteTitle = "Название заметки"
         static let noteDescription = "Описание заметки"
+        static let threeDots = "..."
     }
     
     enum Comment {

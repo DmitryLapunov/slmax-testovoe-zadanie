@@ -18,6 +18,7 @@ enum Colors {
                 return uiTraitCollection.userInterfaceStyle == .light ? lightTheme : darkTheme
             }
         }()
+        static let clear = UIColor.clear
     }
     
     enum Note {
@@ -43,6 +44,13 @@ enum Colors {
             return UIColor { (uiTraitCollection: UITraitCollection) -> UIColor in
                 let lightTheme = UIColor(red: 0.825, green: 0.825, blue: 0.825, alpha: 1)
                 let darkTheme = UIColor(red: 0.492, green: 0.492, blue: 0.492, alpha: 1)
+                return uiTraitCollection.userInterfaceStyle == .light ? lightTheme : darkTheme
+            }
+        }()
+        static let date: UIColor = {
+            return UIColor { (uiTraitCollection: UITraitCollection) -> UIColor in
+                let lightTheme = UIColor(red: 0.562, green: 0.562, blue: 0.562, alpha: 1)
+                let darkTheme = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
                 return uiTraitCollection.userInterfaceStyle == .light ? lightTheme : darkTheme
             }
         }()

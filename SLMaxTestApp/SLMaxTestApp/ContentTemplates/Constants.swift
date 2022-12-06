@@ -28,23 +28,27 @@ enum Constants {
         static let titleBottom: CGFloat = -10
         static let titleTrailing: CGFloat = -6.5
         static let separatorLeading: CGFloat = 92
-        static let separatorHeight: CGFloat = 25
-        static let separatorWidth: CGFloat = 1
+        static let separatorHeight: CGFloat = 15
+        static let separatorWidth: CGFloat = 0.5
         static let shortDescriptionLeading: CGFloat = 8.5
         static let shortDescriptionTrailing: CGFloat = -13
-        static let arrowTrailing: CGFloat = -16
+        static let arrowTrailing: CGFloat = -22
         static let arrowWidth: CGFloat = 8
         static let arrowHeight: CGFloat = 4
+        static let arrowCenterYOffset: CGFloat = 1
         static let cornerRadius: CGFloat = 5
+        static let bottomSpacing: CGFloat = -10
+        static let titleMaxCharactersCount = 25
     }
     
     enum Description {
-        static let dateTop: CGFloat = 10
         static let dateTrailing: CGFloat = -22
-        static let descriptionTop: CGFloat = 27
-        static let descriptionBottom: CGFloat = -27
+        static let descriptionTop: CGFloat = 17
+        static let descriptionBottom: CGFloat = -37
         static let descriptionLeading: CGFloat = 17
         static let descriptionTrailing: CGFloat = -17
+        static let separatorBottom: CGFloat = -10
+        static let separatorHeight: CGFloat = 1
     }
     
     enum TextFields {
@@ -69,9 +73,5 @@ enum Constants {
     enum Label {
         static let singleLine = 1
         static let infiniteLines = 0
-    }
-    
-    enum Spacing {
-        static let tableView: CGFloat = 10
     }
 }

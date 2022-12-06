@@ -7,17 +7,19 @@
 
 import UIKit
 
-class NotesViewController: UIViewController {
+final class NotesViewController: UIViewController {
     
     let controllerView = NotesView()
+    var notes: [NoteStructure] = []
     
     override func loadView() {
         super.loadView()
         self.view = controllerView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
     
     init() {
@@ -29,7 +31,9 @@ class NotesViewController: UIViewController {
     }
     
     private func setupView() {
-//        controllerView.tableView.dataSource = self
-//        controllerView.tableView.delegate = self
+        controllerView.tableView.dataSource = self
+        controllerView.tableView.delegate = self
+        controllerView.notesViewDelegate = self
+        controllerView.textFieldsView.titleField.delegate = self
     }
 }

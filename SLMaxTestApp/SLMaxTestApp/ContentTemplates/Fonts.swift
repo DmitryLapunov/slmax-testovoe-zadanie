@@ -12,7 +12,7 @@ enum Fonts {
     enum Main {
         static let appTitle = UIFont(name: RalewayFont.semibold, size: 28)
         static let datePicker = UIFont(name: RalewayFont.light, size: 13)
-        static let chevron = UIFont.systemFont(ofSize: 20, weight: .ultraLight)
+        static let chevron = UIFont.systemFont(ofSize: 20, weight: .thin)
     }
     
     enum Note {

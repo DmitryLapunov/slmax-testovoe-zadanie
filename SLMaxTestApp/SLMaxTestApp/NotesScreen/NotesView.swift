@@ -7,7 +7,9 @@
 
 import UIKit
 
-class NotesView: UIView {
+final class NotesView: UIView {
+    
+    weak var notesViewDelegate: NotesViewDelegateProtocol?
     
     private lazy var backView: UIImageView = {
         let imageView = UIImageView()
@@ -37,17 +39,20 @@ class NotesView: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(NoteCell.self, forCellReuseIdentifier: NoteCell.reuseIdentifier)
+        tableView.register(DescriptionCell.self, forCellReuseIdentifier: DescriptionCell.reuseIdentifier)
         tableView.showsVerticalScrollIndicator = false
         tableView.backgroundColor = Colors.Main.background
+        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
     
-    private let textFieldsView = TextFieldsView()
+    let textFieldsView = TextFieldsView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = Colors.Main.background
+        passNoteStructure()
         setupSubviews()
         setConstraints()
     }
@@ -94,5 +99,12 @@ class NotesView: UIView {
                                                  constant: Constants.Main.basicTrailing).isActive = true
         textFieldsView.bottomAnchor.constraint(equalTo: self.bottomAnchor,
                                                constant: Constants.TextFields.bottom).isActive = true
+    }
+    
+    private func passNoteStructure() {
+        textFieldsView.noteCreationAction = { [weak self] noteStructure in
+            guard let self = self else { return }
+            self.notesViewDelegate?.saveNote(note: noteStructure)
+        }
     }
 }
