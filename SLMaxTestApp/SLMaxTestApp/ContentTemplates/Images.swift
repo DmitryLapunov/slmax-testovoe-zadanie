@@ -18,7 +18,7 @@ enum Images {
         static let calendar = UIImage(named: "calendar")
         static let darkTheme = UIImage(named: "dark_theme")
         static let lightTheme = UIImage(named: "light_theme")
-        static let cancel = UIImage(named: "cancel")
+        static let cancel = UIImage(systemName: "arrow.triangle.2.circlepath")
         static let chevronDown = UIImage(systemName: "chevron.down")
         static let chevronUp = UIImage(systemName: "chevron.up")
     }

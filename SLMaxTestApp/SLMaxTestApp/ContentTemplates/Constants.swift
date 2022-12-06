@@ -39,6 +39,15 @@ enum Constants {
         static let cornerRadius: CGFloat = 5
         static let bottomSpacing: CGFloat = -10
         static let titleMaxCharactersCount = 25
+        static let deleteLabelLeading: CGFloat = 23
+        static let deleteLabelTrailing: CGFloat = -23
+        static let cancelImageYOffset: CGFloat = 1
+        static let cancelImageSize: CGFloat = 22
+        static let timer = 5.0
+        static let timeInterval = 1.0
+        static let descriptionMaxCount = 20
+        static let animationDuration = 0.1
+        static let animationDelay = 0.0
     }
     
     enum Description {

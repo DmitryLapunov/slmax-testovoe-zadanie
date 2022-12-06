@@ -18,6 +18,7 @@ enum Contents {
         static let noteTitle = "Название заметки"
         static let noteDescription = "Описание заметки"
         static let threeDots = "..."
+        static let delete = "Удалить"
     }
     
     enum Comment {
