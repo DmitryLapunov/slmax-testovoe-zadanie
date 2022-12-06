@@ -11,7 +11,7 @@ import UIKit
 enum Constants {
     enum Main {
         static let titleTop: CGFloat = 80
-        static let tableViewTop: CGFloat = 29
+        static let tableViewTop: CGFloat = 63
         static let tableViewBottom: CGFloat = -29
         static let basicLeading: CGFloat = 30
         static let basicTrailing: CGFloat = -30
@@ -77,6 +77,21 @@ enum Constants {
         static let buttonWidth: CGFloat = 24
         static let buttonHeight: CGFloat = 26
         static let cornerRadius: CGFloat = 10
+    }
+    
+    enum ThemeSwitcher {
+        static let switcherTop: CGFloat = 18
+        static let switcherWidth: CGFloat = 60
+        static let switcherHeight: CGFloat = 25
+        static let backgroundCorner: CGFloat = 12.5
+        static let toggleCorner: CGFloat = 10
+        static let toggleSize: CGFloat = 20
+        static let toggleLeading: CGFloat = 2.5
+        static let toggleTrailing: CGFloat = -2.5
+        static let lightModeSize: CGFloat = 12.5
+        static let darkModeSize: CGFloat = 12
+        static let lightModeLeading: CGFloat = 6.25
+        static let darkModeTrailing: CGFloat = -6.5
     }
     
     enum Label {

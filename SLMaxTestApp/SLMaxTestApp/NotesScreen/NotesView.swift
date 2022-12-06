@@ -36,6 +36,8 @@ final class NotesView: UIView {
         return label
     }()
     
+    private let customSwitcher = CustomSwitcher()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(NoteCell.self, forCellReuseIdentifier: NoteCell.reuseIdentifier)
@@ -53,6 +55,7 @@ final class NotesView: UIView {
         super.init(frame: frame)
         self.backgroundColor = Colors.Main.background
         passNoteStructure()
+        changeAppTheme()
         setupSubviews()
         setConstraints()
     }
@@ -65,6 +68,7 @@ final class NotesView: UIView {
         addSubview(backView)
         addSubview(frontView)
         frontView.addSubview(titleLabel)
+        addSubview(customSwitcher)
         addSubview(tableView)
         addSubview(textFieldsView)
     }
@@ -83,6 +87,13 @@ final class NotesView: UIView {
         titleLabel.centerXAnchor.constraint(equalTo: frontView.centerXAnchor).isActive = true
         titleLabel.topAnchor.constraint(equalTo: frontView.topAnchor,
                                         constant: Constants.Main.titleTop).isActive = true
+        
+        customSwitcher.trailingAnchor.constraint(equalTo: self.trailingAnchor,
+                                                 constant: Constants.Main.basicTrailing).isActive = true
+        customSwitcher.topAnchor.constraint(equalTo: frontView.bottomAnchor,
+                                            constant: Constants.ThemeSwitcher.switcherTop).isActive = true
+        customSwitcher.widthAnchor.constraint(equalToConstant: Constants.ThemeSwitcher.switcherWidth).isActive = true
+        customSwitcher.heightAnchor.constraint(equalToConstant: Constants.ThemeSwitcher.switcherHeight).isActive = true
         
         tableView.topAnchor.constraint(equalTo: frontView.bottomAnchor,
                                        constant: Constants.Main.tableViewTop).isActive = true
@@ -105,6 +116,18 @@ final class NotesView: UIView {
         textFieldsView.noteCreationAction = { [weak self] noteStructure in
             guard let self = self else { return }
             self.notesViewDelegate?.saveNote(note: noteStructure)
+        }
+    }
+    
+    private func changeAppTheme() {
+        customSwitcher.changeTheme = { [weak self] themeMode in
+            guard let self = self else { return }
+            switch themeMode {
+            case .light:
+                self.overrideUserInterfaceStyle = .light
+            case .dark:
+                self.overrideUserInterfaceStyle = .dark
+            }
         }
     }
 }
