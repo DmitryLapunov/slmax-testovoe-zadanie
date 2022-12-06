@@ -55,7 +55,7 @@ final class NotesView: UIView {
         super.init(frame: frame)
         self.backgroundColor = Colors.Main.background
         passNoteStructure()
-        changeAppTheme()
+        passAppTheme()
         setupSubviews()
         setConstraints()
     }
@@ -119,15 +119,10 @@ final class NotesView: UIView {
         }
     }
     
-    private func changeAppTheme() {
+    private func passAppTheme() {
         customSwitcher.changeTheme = { [weak self] themeMode in
             guard let self = self else { return }
-            switch themeMode {
-            case .light:
-                self.overrideUserInterfaceStyle = .light
-            case .dark:
-                self.overrideUserInterfaceStyle = .dark
-            }
+            self.notesViewDelegate?.changeAppTheme(theme: themeMode)
         }
     }
 }

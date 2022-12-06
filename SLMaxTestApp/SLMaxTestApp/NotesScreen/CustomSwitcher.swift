@@ -15,7 +15,6 @@ enum ThemeMode {
 final class CustomSwitcher: UIView {
     
     private var toggleViewLeadingAnchor = NSLayoutConstraint()
-    private var toggleViewTrailingAnchor = NSLayoutConstraint()
     var changeTheme: ((ThemeMode) -> Void)?
     
     private lazy var switcherBackgroundView: UIView = {
@@ -85,13 +84,7 @@ final class CustomSwitcher: UIView {
         toggleView.heightAnchor.constraint(equalToConstant: Constants.ThemeSwitcher.toggleSize).isActive = true
         toggleViewLeadingAnchor = toggleView.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                                                       constant: Constants.ThemeSwitcher.toggleLeading)
-        toggleViewTrailingAnchor = toggleView.trailingAnchor.constraint(equalTo: self.trailingAnchor,
-                                                                        constant: Constants.ThemeSwitcher.toggleTrailing)
-        if traitCollection.userInterfaceStyle == .light {
-            toggleViewLeadingAnchor.isActive = true
-        } else {
-            toggleViewTrailingAnchor.isActive = true
-        }
+        toggleViewLeadingAnchor.isActive = true
         
         lightModeImageView.widthAnchor.constraint(equalToConstant: Constants.ThemeSwitcher.lightModeSize).isActive = true
         lightModeImageView.heightAnchor.constraint(equalToConstant: Constants.ThemeSwitcher.lightModeSize).isActive = true
@@ -115,12 +108,16 @@ final class CustomSwitcher: UIView {
     
     @objc private func switcherTapped(_ sender: UITapGestureRecognizer) {
         if traitCollection.userInterfaceStyle == .light {
-            toggleViewLeadingAnchor.isActive = false
-            toggleViewTrailingAnchor.isActive = true
+            toggleViewLeadingAnchor.constant = Constants.ThemeSwitcher.toggleLeadingIncreased
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
+                self.layoutIfNeeded()
+            }
             changeTheme?(.dark)
         } else {
-            toggleViewTrailingAnchor.isActive = false
-            toggleViewLeadingAnchor.isActive = true
+            toggleViewLeadingAnchor.constant = Constants.ThemeSwitcher.toggleLeading
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
+                self.layoutIfNeeded()
+            }
             changeTheme?(.light)
         }
     }

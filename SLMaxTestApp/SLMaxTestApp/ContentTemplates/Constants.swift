@@ -87,7 +87,7 @@ enum Constants {
         static let toggleCorner: CGFloat = 10
         static let toggleSize: CGFloat = 20
         static let toggleLeading: CGFloat = 2.5
-        static let toggleTrailing: CGFloat = -2.5
+        static let toggleLeadingIncreased: CGFloat = 37.5
         static let lightModeSize: CGFloat = 12.5
         static let darkModeSize: CGFloat = 12
         static let lightModeLeading: CGFloat = 6.25
